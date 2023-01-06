@@ -1,3 +1,5 @@
+# Main bot file to launch bot
+
 import asyncio
 import os
 import discord
@@ -18,12 +20,14 @@ async def load():
 
     amount = 0
 
+    # Look for subclasses in ./commands
     for commandos in os.listdir('./commands'):
         if commandos.endswith('.py'):
             amount += 1
 
     print(str(amount) + " commands found... \n")
 
+    # Load command subclasses "cogs"
     for filename in os.listdir('./commands'):
         if filename.endswith('.py'):
             await bot.load_extension(f'commands.{filename[:-3]}')
