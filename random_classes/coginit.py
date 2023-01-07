@@ -8,4 +8,4 @@ class coginit:
     @staticmethod
     def report(filename):
         time.sleep(1)
-        print(str(filename) + ' has been loaded! \n')
+        print(' :' + str(filename) + ' has been loaded! \n')
