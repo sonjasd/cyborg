@@ -12,7 +12,7 @@ class flipacoin(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-         coginit.report(filename=script)
+        return
     
     @commands.command()
     async def flipacoin(self, ctx):
@@ -26,3 +26,4 @@ class flipacoin(commands.Cog):
 
 async def setup(bot):
     await bot.add_cog(flipacoin(bot))
+    coginit.report(filename=script)
